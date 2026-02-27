@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('./fonts/RobotoCondensed-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('./fonts/RobotoCondensed-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VendSans";
+    src: url('./fonts/VendSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 
+глобальные css переменные 
+по какому принципу определяется, что сюда вносить?
+*/
+:root {
+    --color-dark: #000;
+    --color-light: #FFF;
+    --color-dark-gray: #404040;
+    --color-light-gray: #C4C4C4;
+
+    --border-radius: 30px;
+    --border: 1px solid var(--color-light);
+
+    --font-family-base: 'Roboto', sans-serif;
+    --font-family-base: 'VendSans', sans-serif;
+
+    --input-height: 54px;
+
+    --containet-width: 1300px;
+    --containet-padding-x: 15px;
+
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-family-base);
+}
