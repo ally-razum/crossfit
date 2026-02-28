@@ -28,6 +28,7 @@
 */
 :root {
   --color-dark: #000;
+  --color-dark-alternate: #131619;
   --color-light: #fff;
   --color-dark-gray: #404040;
   --color-light-gray: #c4c4c4;
@@ -114,10 +115,13 @@ h6 {
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  padding-inline: 32px;
+  background-color: var(--color-dark-alternate);
 }
 
 .header-menu-list {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 50px;
 }
 
@@ -157,4 +161,68 @@ h6 {
 .header-actions {
   display: flex;
   column-gap: 40px;
+}
+
+.header-burger-button {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 4px;
+  width: 40px;
+  height: 40px;
+  padding-left: 8px;
+  color: var(--color-light);
+  background-color: transparent; /* Фон отсутствует. Он полностью прозрачный */
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.header-burger-button:hover {
+  color: var(--color-light-gray);
+  border-color: currentColor;
+}
+
+.header-burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+  box-shadow: 16px 0 0 0 currentColor;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-top: 20px;
+    padding-inline: 15px; /* зачем так пишут??? */
+    
+  }
+    .header-menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+  .header-menu-link{
+    height: 50px;
+  }
+}
+
+@media (max-width:767px) {
+    .button{
+        padding-inline: 18px;
+    }
+    .header{
+        padding-top: 10px;
+    }
+
+    .header-menu-list{
+        column-gap: 24px;
+    }
+
+    .header-menu-link {
+        height: 32px;
+    }
+    
+    .header-actions {
+        column-gap: 15px;
+    }
 }
